@@ -5,7 +5,7 @@ TARGET	=  power
 
 C_SOURCES =  myPower.cpp
 C_OBJS     = myPower.o
-MY_INCLUDES = rng.h
+MY_INCLUDES =
 
 CCX = g++
 CXXFLAGS = -g -std=c++11  -Wall
@@ -22,8 +22,9 @@ $(TARGET) :   $(C_OBJS)
 # Implicit rules: $@ = target name, $< = first prerequisite name, $^ = name of all prerequisites
 #============================================================
 
-ALL_SOURCES = makefile $(C_SOURCES) $(MY_INCLUDES)
+ALL_SOURCES = makeFind $(C_SOURCES) $(MY_INCLUDES)
 
+INPUT_FILES  =  Sorted100.txt  Sorted100K.txt  Sorted1M.txt
 
 clean:
 	rm -f $(TARGET) $(C_OBJS) core *~
