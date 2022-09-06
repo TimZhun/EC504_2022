@@ -108,7 +108,7 @@ double  fastPower(double x, long int N)
 
   while(N > 0)
     { 
-      if(N%2) pow *= square ; // Update pow 
+      if(N%2) pow *= 1 ; // Update pow 
       N = N/2;
       // Update square
       square *= square;
